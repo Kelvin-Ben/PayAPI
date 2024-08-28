@@ -1,6 +1,4 @@
-body {
-  background-color: #EDF3F8;
-}
+
 .hero-header {
   background-image: url(./assets//shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
@@ -12,47 +10,6 @@ body {
   width: 100%;
   padding: 0 var(--spacing-xlarge);
 }
-header {
-  min-height: 4rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-family-body);
-  margin: var(--spacing-xsmall) 0;
-}
-nav {
-  min-width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-  width: 60%;
-  font-size: var(--font-size-xsmall);
-  text-transform: capitalize;
-  font-weight: 500;
-}
-.link {
-  text-decoration: none;
-  color: var(--secondary-color-lightJuanBlue);
-  }
-
-  .btn {
-    border-radius: var(--border-radius);
-    background-color: var(--primary-color-darkPink);
-    padding: var(--spacing-xsmall);
-    color: var(--primary-color-waterWhite);
-    font-family: var(--font-family-body);
-  }
-  .btn:hover {
-    background-color: var(--secondary-color-charmPink);
-  }
-
   /* hero-content style */
   .hero-content {
     width: auto;
@@ -77,18 +34,18 @@ nav {
     color: var(--secondary-color-juanBlue);
     font-weight: normal;
   }
-  .form {
+  .intro {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: auto;
   }
-  .input-wrapper {
+  .form {
     position: relative;
     width: auto;
   }
   .input-field {
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, .2);
     width: 88%;
     box-sizing: border-box;
     border: none;
@@ -96,9 +53,9 @@ nav {
     border-radius: var(--border-radius);
     font-family: var(--font-family-body);
     color: var(--secondary-color-juanBlue);
-    font-weight: 600;
-    display: flex;
+    font-weight: normal;
     cursor: pointer;
+    font-size: var(--font-size-xsmall);
   }
   .input-field:focus {
     outline: none;
@@ -138,12 +95,6 @@ nav {
   .partners-text {
     line-height: var(--spacing-medium);
     margin-bottom: var(--spacing-medium);
-  }
-  .partners-logo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-large);
-    list-style-type: none;
   }
   .cta-about {
     width: 30%;
@@ -213,81 +164,11 @@ nav {
     line-height: var(--spacing-small);
   }
 
-  /* cta start */
+  /* cta-start */
   .cta-start {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: var(--spacing-large) var(--spacing-xlarge);
-    min-height: auto;
-  }
-  .start-form {
-    display: flex;
-    align-items: end;
-    width: 30%;
-    height: 80%;
-    position: relative;
-  }
-  .start__input-field {
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
-    width: 100%;
-    box-sizing: border-box;
-    border: none;
-    padding: 13px var(--spacing-small);
-    border-radius: var(--border-radius);
-    font-family: var(--font-family-body);
-    color: var(--secondary-color-juanBlue);
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .start__input-field:focus {
-    outline: none;
-  }
-  .start_input-btn {
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 
-  /* footer */
-  footer {
-    padding: var(--spacing-xsmall) var(--spacing-xlarge);
-    background-color: var(--secondary-color-mirrageBlue);
-    min-height: 4rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-family: var(--font-family-body);
-  }
-    
-  footer * a{
-    text-decoration: none;
-    color: var(--secondary-color-lightJuanBlue);
-  }
-  footer * a:hover {
-    color: var(--primary-color-waterWhite);
-  }
-  .footer_logo {
-    display: block;
-    fill: var(--primary-color-waterWhite);
-  }
-  .social-media {
-    width: 10%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    list-style-type: none;
-  }
-
-  /* media queries */
-  @media screen and (min-width: 1500px) {
-    .hero-header {
-      background-size: 40%;
-    }
-  }
 /* style the hamburger button to take it out for the time being. We shall revist */
 .hamburger-menu, .hamburger-close {
   display: none;
