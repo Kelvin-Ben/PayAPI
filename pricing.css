@@ -1,0 +1,90 @@
+body {
+  background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: calc(100% - -10vw) calc(-33vw);
+}
+
+header {
+  padding: 0 var(--spacing-xlarge);
+}
+.main {
+  padding: 0 var(--spacing-xlarge);
+}
+/* pricing section */
+.heading-price {
+  color: var(--secondary-color-juanBlue);
+  padding: var(--spacing-small) 0;
+  font-weight: 100;
+}
+.pricing-plans {
+  display: flex;
+  gap: var(--spacing-medium);
+  padding-top: var(--spacing-medium);
+}
+.plans {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.plan-heading {
+  color: var(--primary-color-darkPink);
+  font-weight: 700;
+  padding-bottom: var(--spacing-medium);
+}
+.plan-text {
+  color: var(--secondary-color-lightJuanBlue);
+  font-weight: 500;
+  line-height: var(--spacing-small);
+}
+.price {
+  color: var(--secondary-color-juanBlue);
+  font-weight: 500;
+  padding: var(--spacing-xsmall) 0;
+  margin-bottom: var(--spacing-small);
+  border-bottom: 2px solid rgba(151, 151, 151, .2);
+}
+.benefits {
+  list-style-type: none;
+  margin-bottom: var(--spacing-medium);
+  border-bottom: 2px solid rgba(151, 151, 151, .2);
+}
+
+.benefits li {
+  padding-bottom: var(--spacing-xsmall);
+  display: grid;
+  grid-template-columns: 1.5rem auto;
+  align-items: center;
+  font-size: var(--font-xxsmall);
+  font-family: var(--font-family-body);
+}
+
+.benefit-item {
+  color: var(--secondary-color-mirrageBlue);
+}
+.limit-item {
+  color: var(--secondary-color-lightJuanBlue);
+}
+.limit-item .icon-check {
+  visibility: hidden;
+}
+.cta-request {
+  width: 35%;
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color-mirrageBlue);
+  color: var(--secondary-color-mirrageBlue);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+.cta-request:hover {
+  color: var(--primary-color-waterWhite);
+  background-color: var(--secondary-color-juanBlue);
+}
+
+/* cta-start */
+.cta-heading {
+  color: var(--secondary-color-juanBlue);
+  font-weight: normal;
+}
