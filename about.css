@@ -1,0 +1,83 @@
+body {
+  background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: calc(100% - -10vw) calc(-33vw);
+}
+header {
+  padding: 0 var(--spacing-xlarge);
+}
+
+/* style intro section */
+.intro {
+  padding: var(--spacing-small) var(--spacing-xlarge);
+  margin-left: var(--spacing-large);
+}
+.intro-text {
+  color: var(--secondary-color-juanBlue);
+  line-height: 1.1;
+}
+.more-about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-xmedium);
+}
+.vision-section, .business-section, .culture-section, .people-section {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-medium);
+}
+.heading {
+  width: 20%;
+  /* text-align: center; */
+  color: var(--secondary-color-juanBlue);
+  font-weight: normal;
+}
+.text {
+  max-width: 51%;
+  color: var(--secondary-color-lightJuanBlue);
+  line-height: 1.5;
+}
+
+/* style the image */
+.team-members {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: var(--spacing-xmedium) 0;
+}
+
+/* style stats section */
+.stats {
+  padding: 0 var(--spacing-xlarge);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+.members, .offices, .transactions {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-top: 2px solid rgba(151, 151, 151, .2);
+  border-bottom: 2px solid rgba(151, 151, 151, .2);
+  padding: var(--spacing-small);
+/* start here in the morning!!! */
+}
+.member-text, .office-text, .transaction-text {
+  color: var(--secondary-color-lightJuanBlue);
+}
+.figure {
+  font-weight: normal;
+  color: var(--primary-color-darkPink);
+}
+
+.cta-start {
+  padding: var(--spacing-large) var(--spacing-xlarge);
+}
+.cta-heading {
+  color: var(--secondary-color-juanBlue);
+  font-weight: normal;
+}

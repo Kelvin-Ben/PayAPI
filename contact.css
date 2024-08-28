@@ -1,0 +1,113 @@
+body {
+  background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: calc(100% - -10vw) calc(-33vw);
+}
+header {
+  padding: 0 var(--spacing-xlarge);
+}
+
+/* style intro section */
+.intro {
+  padding: var(--spacing-small) var(--spacing-xlarge);
+}
+.intro-text {
+  color: var(--secondary-color-juanBlue);
+  line-height: 1.1;
+}
+
+/* style contact section */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-small) var(--spacing-xlarge);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  min-width: 30%;
+  background-color: inherit;
+}
+.name, .email, .company-name, .title, #message {
+  border: none;
+  background-color: inherit;
+  border-bottom: 1px solid rgba(151, 151, 151, .5);
+  padding: var(--spacing-xsmall);
+  color: var(--secondary-color-juanBlue);
+}
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.subscribe {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-small) 0;
+}
+.partners-text {
+  color: var(--secondary-color-juanBlue);
+  margin-bottom: var(--spacing-medium);
+}
+.partners-logo {
+  column-gap: var(--spacing-xmedium);
+  row-gap: var(--spacing-small);
+}
+
+/* styling checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #979797;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  margin-right: var(--spacing-small);
+}
+label {
+  color: var(--secondary-color-juanBlue);
+  cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 20px;
+  display: none;
+  color: var(--primary-color-waterWhite);
+}
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color-darkPink);
+}
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+/* submit button */
+.btn-submit {
+  text-align: center;
+  width: 40%;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color-juanBlue);
+  color: var(--secondary-color-juanBlue);
+  text-decoration: none;
+}
+.btn-submit:hover {
+  background-color: var(--secondary-color-juanBlue);
+  color: var(--primary-color-waterWhite);
+}
+
+/* cta-start */
+.cta-start {
+  padding: var(--spacing-large) var(--spacing-xlarge);
+}
