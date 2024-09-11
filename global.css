@@ -81,20 +81,19 @@ body {
 }
 
 header {
-  min-height: 4rem;
+  min-height: 6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-family-body);
-  margin: var(--spacing-xsmall) 0;
+  /* border: 1px solid red; */
 }
 nav {
   min-width: 40%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border: 1px solid red; */
 }
 
 .hero-header,
@@ -190,7 +189,7 @@ footer {
   background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: 40%;
-  background-position: calc(100% - -15vw) calc(-5vw);
+  background-position: calc(100% - -10vw) calc(-10vw);
 }
 
 footer * a {
@@ -229,21 +228,29 @@ footer * a:hover {
 
 /* tablet screen */
 @media screen and (max-width: 1023px) {
-  header,
+  .hero-header {
+    width: auto;
+    padding: 0 var(--spacing-small);
+  }
+  /* header {
+    border: 1px solid red;
+    margin-top: var(--spacing-small);
+  } */
   footer {
     margin-top: var(--spacing-small);
-    padding: 0 var(--spacing-medium);
   }
   footer {
-    padding: 0;
     width: auto;
+    padding: 0 var(--spacing-small);
+    background-size: 100%;
+    background-position: calc(100% - -40vw) calc(-10vw);
   }
   .cta-start {
     flex-direction: column;
     width: 100%;
     height: auto;
     padding: 0 var(--spacing-small);
-    margin-bottom: var(--spacing-xmedium);
+    margin: var(--spacing-xmedium) 0;
   }
   .cta-heading {
     text-align: center;
@@ -257,5 +264,9 @@ footer * a:hover {
     width: 100%;
     padding: 13px;
     font-size: var(--font-size-xsmall);
+  }
+  .social-media {
+    justify-content: space-around;
+    width: 20%;
   }
 }

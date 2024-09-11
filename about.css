@@ -4,44 +4,47 @@ body {
   background-size: 45%;
   background-position: calc(100% - -10vw) calc(-33vw);
 }
-header {
-  padding: 0 var(--spacing-xlarge);
-}
 
 /* style intro section */
 .intro {
   padding: var(--spacing-small) var(--spacing-xlarge);
-  margin-left: var(--spacing-large);
+  /* margin-left: var(--spacing-large); */
 }
 .intro-text {
   color: var(--secondary-color-juanBlue);
   line-height: 1.1;
+  margin-left: var(--spacing-large);
 }
 .more-about {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);
   margin-top: var(--spacing-xmedium);
+  margin-left: var(--spacing-large);
 }
-.vision-section, .business-section, .culture-section, .people-section {
+.vision-section,
+.business-section,
+.culture-section,
+.people-section {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-medium);
 }
+
 .heading {
   width: 20%;
-  /* text-align: center; */
   color: var(--secondary-color-juanBlue);
   font-weight: normal;
 }
 .text {
-  max-width: 51%;
+  width: 51%;
   color: var(--secondary-color-lightJuanBlue);
   line-height: 1.5;
 }
 
 /* style the image */
-.team-members {
+.desktop-team,
+.tablet-team {
   width: 100%;
   height: auto;
   display: block;
@@ -57,16 +60,19 @@ header {
   align-items: center;
   gap: var(--spacing-medium);
 }
-.members, .offices, .transactions {
+.members,
+.offices,
+.transactions {
   display: flex;
   flex-direction: column;
   width: 30%;
-  border-top: 2px solid rgba(151, 151, 151, .2);
-  border-bottom: 2px solid rgba(151, 151, 151, .2);
+  border-top: 2px solid rgba(151, 151, 151, 0.2);
+  border-bottom: 2px solid rgba(151, 151, 151, 0.2);
   padding: var(--spacing-small);
-/* start here in the morning!!! */
 }
-.member-text, .office-text, .transaction-text {
+.member-text,
+.office-text,
+.transaction-text {
   color: var(--secondary-color-lightJuanBlue);
 }
 .figure {
@@ -80,4 +86,47 @@ header {
 .cta-heading {
   color: var(--secondary-color-juanBlue);
   font-weight: normal;
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    background-size: 45%;
+    background-position: calc(100% - -23vw) calc(-20vw);
+  }
+
+  .desktop-team {
+    display: none;
+  }
+  .intro {
+    padding: var(--spacing-small);
+    margin: auto;
+  }
+  .intro-text {
+    text-align: center;
+    margin-left: 0;
+  }
+  .heading {
+    width: 20%;
+  }
+  .text {
+    width: 70%;
+  }
+  .stats {
+    padding: 0 var(--spacing-small);
+  }
+  .transactions {
+    width: auto;
+  }
+  .more-about {
+    margin-top: var(--spacing-medium);
+  }
+  .cta-start {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .tablet-team {
+    display: none;
+  }
 }

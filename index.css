@@ -2,8 +2,7 @@
   background-image: url(./assets//shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
   background-size: 45%;
-  background-position: calc(100% - -5vw) calc(-10vw);
-  border: 1px solid var(--primary-color-waterWhite);
+  background-position: calc(100% - -15vw) calc(-10vw);
 }
 
 /* hero-content style */
@@ -38,7 +37,6 @@
   width: auto;
   height: auto;
   object-fit: cover;
-  width: 1px solid black;
 }
 
 .form {
@@ -141,8 +139,9 @@
   padding: 0 var(--spacing-xlarge);
   background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: calc(100% - -18vw) calc(0vw);
+  background-size: 44%;
+  background-position: calc(100% - -20vw) calc(0vw);
+  margin-bottom: var(--spacing-medium);
 }
 
 .simple-ui-image {
@@ -191,20 +190,26 @@
 
 /* tablet screen */
 @media screen and (max-width: 1023px) {
-  .hero-header,
-  .partners,
-  footer {
-    width: auto;
-    padding: 0 var(--spacing-small);
+  .hero-header {
+    background-image: url(./assets//shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
     background-size: 120%;
     background-position: calc(100% - -10vw) calc(-80vw);
-    /* border: none; */
+    padding: 0 var(--spacing-small);
+    /* border: 1px solid red; */
+    margin-top: 0;
   }
   .hero-content {
     padding: 0;
     width: 100%;
     flex-direction: column-reverse;
     margin-bottom: var(--spacing-xmedium);
+  }
+  .partners {
+    width: auto;
+    padding: 0 var(--spacing-small);
+    background-size: 120%;
+    background-position: calc(100% - -10vw) calc(-80vw);
   }
   .cta-intro {
     width: 100%;
@@ -292,9 +297,5 @@
   .finance {
     padding: 0 var(--spacing-small);
     margin-bottom: var(--spacing-xmedium);
-  }
-  .social-media {
-    justify-content: space-around;
-    width: 20%;
   }
 }
