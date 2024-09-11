@@ -4,9 +4,9 @@ body {
   background-size: 45%;
   background-position: calc(100% - -10vw) calc(-33vw);
 }
-header {
+/* .hero-header {
   padding: 0 var(--spacing-xlarge);
-}
+} */
 
 /* style intro section */
 .intro {
@@ -31,10 +31,14 @@ header {
   min-width: 30%;
   background-color: inherit;
 }
-.name, .email, .company-name, .title, #message {
+.name,
+.email,
+.company-name,
+.title,
+#message {
   border: none;
   background-color: inherit;
-  border-bottom: 1px solid rgba(151, 151, 151, .5);
+  border-bottom: 1px solid rgba(151, 151, 151, 0.5);
   padding: var(--spacing-xsmall);
   color: var(--secondary-color-juanBlue);
 }
@@ -110,4 +114,35 @@ input[type="checkbox"]:checked::after {
 /* cta-start */
 .cta-start {
   padding: var(--spacing-large) var(--spacing-xlarge);
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    background-size: 45%;
+    background-position: calc(100% - -23vw) calc(-20vw);
+  }
+  .hero-header {
+    padding: 0 var(--spacing-small);
+  }
+  .intro {
+    padding: var(--spacing-small);
+  }
+  .intro-text {
+    text-align: center;
+    width: auto;
+  }
+  .contact {
+    flex-direction: column;
+    padding: var(--spacing-xsmall) var(--spacing-small);
+  }
+  .form {
+    width: 50%;
+    margin-bottom: var(--spacing-medium);
+  }
+  .partners-text {
+    text-align: center;
+  }
+  .cta-start {
+    padding: var(--spacing-xsmall) var(--spacing-small);
+  }
 }
