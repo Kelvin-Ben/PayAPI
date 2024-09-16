@@ -263,6 +263,10 @@
     margin-bottom: var(--spacing-medium);
     text-align: center;
   }
+  .implementation-image {
+    width: auto;
+    object-fit: contain;
+  }
   .implementation-details {
     width: 65%;
     height: auto;
@@ -297,5 +301,98 @@
   .finance {
     padding: 0 var(--spacing-small);
     margin-bottom: var(--spacing-xmedium);
+  }
+}
+
+/* mobile screen */
+@media screen and (max-width: 768px) {
+  body {
+    border: 1px solid green;
+  }
+  header {
+    padding: 0 var(--spacing-small);
+  }
+  .nav-links, .header-link {
+    display: none;
+  }
+  .nav-toggle {
+    display: flex;
+    width: 10%;
+    height: auto;
+    padding: var(--spacing-xsmall);
+  }
+  .hamburger-menu {
+    display: inline-block;
+  }
+  .hero-header {
+    width: 100%;
+    background-size: 120%;
+    background-position: calc(100% - -10vw) calc(-43vw);
+    padding: 0;
+  }
+  .hero-content {
+    padding: 0 var(--spacing-small);
+    text-align: center;
+
+
+  }
+  .cta-intro {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .cta-heading {
+    width: auto;
+    font-size: var(--font-size-medium);
+    margin: 0;
+  }
+  .form {
+    width: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+  .input-field {
+    margin: var(--spacing-small) 0;
+    font-size: var(--font-size-small);
+  }
+  .input-btn {
+    display: block;
+    position: relative;
+    margin-bottom: var(--spacing-small);
+    font-size: var(--font-size-small);
+  }
+  .cta-question {
+    margin-bottom: var(--spacing-small);
+    font-size: var(--font-size-small);
+  }
+
+  .partners {
+    width: 100%;
+    padding: var(--spacing-xsmall);
+    background-position: calc(100% - -10vw) calc(-76vw);
+  }
+  .partners-logo {
+    width: 100%;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .partners-heading {
+    width: 100%;
+  }
+  .cta-partners {
+    width: 100%;
+    padding: 0;
+  }
+  .partners-text {
+    text-align: center;
+    width: 100%;
+    font-size: var(--font-size-xsmall);
+  }
+  .implementation {
+    width: 100%;
+    border: 1px solid red;
+  }
+  .implementation-image {
+    border: 1px solid red;
   }
 }
