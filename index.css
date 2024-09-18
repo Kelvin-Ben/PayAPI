@@ -44,7 +44,9 @@
   width: 70%;
   margin: var(--spacing-xsmall) 0;
 }
-
+.link {
+  text-align: center;
+}
 .input-field {
   box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -182,12 +184,6 @@
   line-height: var(--spacing-small);
 }
 
-/* style the hamburger button to take it out for the time being. We shall revist */
-.hamburger-menu,
-.hamburger-close {
-  display: none;
-}
-
 /* tablet screen */
 @media screen and (max-width: 1023px) {
   .hero-header {
@@ -196,7 +192,6 @@
     background-size: 120%;
     background-position: calc(100% - -10vw) calc(-80vw);
     padding: 0 var(--spacing-small);
-    /* border: 1px solid red; */
     margin-top: 0;
   }
   .hero-content {
@@ -263,9 +258,10 @@
     margin-bottom: var(--spacing-medium);
     text-align: center;
   }
-  .implementation-image {
-    width: auto;
-    object-fit: contain;
+  .code-icon {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
   .implementation-details {
     width: 65%;
@@ -306,24 +302,13 @@
 
 /* mobile screen */
 @media screen and (max-width: 768px) {
-  body {
-    border: 1px solid green;
+  .container {
+    font-size: var(--font-size-small);
   }
   header {
     padding: 0 var(--spacing-small);
   }
-  .nav-links, .header-link {
-    display: none;
-  }
-  .nav-toggle {
-    display: flex;
-    width: 10%;
-    height: auto;
-    padding: var(--spacing-xsmall);
-  }
-  .hamburger-menu {
-    display: inline-block;
-  }
+  
   .hero-header {
     width: 100%;
     background-size: 120%;
@@ -333,11 +318,8 @@
   .hero-content {
     padding: 0 var(--spacing-small);
     text-align: center;
-
-
   }
   .cta-intro {
-    /* border: 1px solid red; */
     width: 100%;
   }
   .cta-heading {
@@ -347,23 +329,22 @@
   }
   .form {
     width: auto;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
   }
   .input-field {
-    margin: var(--spacing-small) 0;
-    font-size: var(--font-size-small);
+    width: auto;
+    margin: var(--spacing-small);
+    font-size: var(--font-size-xsmall);
   }
   .input-btn {
     display: block;
     position: relative;
-    margin-bottom: var(--spacing-small);
-    font-size: var(--font-size-small);
+    margin: 0 var(--spacing-small);
+    font-size: var(--font-size-xsmall);
   }
   .cta-question {
     margin-bottom: var(--spacing-small);
-    font-size: var(--font-size-small);
   }
 
   .partners {
@@ -378,6 +359,7 @@
   }
   .partners-heading {
     width: 100%;
+    font-size: var(--font-size-medium);
   }
   .cta-partners {
     width: 100%;
@@ -386,13 +368,68 @@
   .partners-text {
     text-align: center;
     width: 100%;
+  }
+  .cta-about {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    max-width: 50%;
     font-size: var(--font-size-xsmall);
+    padding: var(--spacing-xxsmall 0);
   }
   .implementation {
     width: 100%;
-    border: 1px solid red;
   }
-  .implementation-image {
-    border: 1px solid red;
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .implement-image {
+    max-width: 100%;
+  }
+  .implementation-details {
+    width: auto;
+    padding: 0 var(--spacing-medium);
+  }
+  .implement-heading {
+    font-size: var(--font-size-medium);
+  }
+  .implement-text {
+    width: auto;
+    min-height: 2rem;
+    font-size: var(--font-size-xxsmall);
+  }
+  .ui {
+    width: auto;
+    padding: 0  var(--spacing-medium);
+  }
+  .ui-heading {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-xsmall);
+  }
+  .ui-text {
+    width: auto;
+    min-height: 2rem;
+    font-size: var(--font-size-xxsmall);
+  }
+  .finance {
+    flex-direction: column;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+  .container {
+    min-width: 100%;
+    margin: 0;
+  }
+  .implement-image {
+    max-width: 100%;
+  }
+  .implement-heading {
+    margin: auto;
+    font-size: var(--font-size-small);
   }
 }
