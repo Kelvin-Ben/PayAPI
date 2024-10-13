@@ -93,6 +93,7 @@ header {
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-family-body);
+  /* border: 1px solid red; */
 }
 nav {
   min-width: 40%;
@@ -109,6 +110,7 @@ nav {
 .partners {
   width: 100%;
   padding: 0 var(--spacing-xlarge);
+  border: 1px solid slateblue;
 }
 .nav-links {
   display: flex;
