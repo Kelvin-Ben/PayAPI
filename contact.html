@@ -19,11 +19,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./contact.css" />
     <title>PayAPI Website</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LerEGEqAAAAAJMgtSACnu4SmDCR1QuA14GAPzbh"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-
   <body>
     <section class="hero-header">
       <header>
@@ -53,53 +55,80 @@
         </p>
       </section>
       <section class="contact">
-        <form action="" class="form">
-          <input
-            type="text"
-            class="name"
-            name="name"
-            placeholder="Name"
-            aria-label="Name"
-          />
-          <input
-            type="email"
-            class="email"
-            name="email"
-            placeholder="Email Address"
-            aria-label="Email Address"
-          />
-          <input
-            type="text"
-            class="company-name"
-            name="company"
-            placeholder="Company Name"
-            aria-label="Company Name"
-          />
-          <input
-            type="text"
-            class="title"
-            name="title"
-            placeholder="Title"
-            aria-label="Title"
-          />
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Message"
-            aria-label="Message"
-            required
-            rows="4"
-          ></textarea>
-          <div class="subscribe">
-            <input type="checkbox" name="subscribe" id="subscribe" />
-            <label for="subscribe" class="subscribe text-xxsmall font-body">
-              Stay up-to-date with company announcements and
-              updates to our API
-            </label>
+        <form action="/api/verifyRecaptcha.js" method="post" class="form" id="contact-form">
+          <!-- hidden field to hold recaptcha token -->
+          <input type="hidden" name="recaptchaResponse" id="recaptchaResponse" />
+          <div class="formfields">
+
+            <div>
+              <input
+              type="text"
+              class="name form-control"
+              name="name"
+              id="name"
+              placeholder="Name"
+              aria-label="Name"
+              />
+            <span class="error-message">
+              Please enter your name.
+            </span>
           </div>
-          <a href="#" type="button" class="btn btn-submit font-body">Submit</a>
+          <div>
+            <input
+              type="email"
+              id="email"
+              class="email form-control"
+              name="email"
+              placeholder="Email Address"
+              aria-label="Email Address"
+            />
+            <span class="error-message">Please enter your email address.</span>
+          </div>
+          <div>
+            <input
+              type="text"
+              class="company-name form-control"
+              name="company"
+              id="company"
+              placeholder="Company Name"
+              aria-label="Company Name"
+            />
+            <span class="error-message">Please enter company name.</span>
+          </div>
+          <div>
+            <input
+              type="text"
+              class="title form-control"
+              name="title"
+              id="title"
+              placeholder="Title"
+              aria-label="Title"
+            />
+            <span class="error-message">Please enter your title.</span>
+          </div>
+          <div>
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              placeholder="Message"
+              aria-label="Message"
+              rows="4"
+              ></textarea>
+              <span class="error-message">Please enter a message.</span>
+            </div>
+            <div class="subscribe">
+              <input type="checkbox" name="subscribe" id="subscribe" />
+              <label for="subscribe" class="subscribe text-xxsmall font-body">
+                Stay up-to-date with company announcements and
+                updates to our API
+              </label>
+            </div>
+            <button type='submit' class="btn btn-submit font-body">Submit</button>
+          </div>
         </form>
-        <section class="partners">
+        <div id="alert" class="text-center"></div>
+        <article class="partners">
           <p class="partners-text font-heading text-small">
             Join the thousands of innovators already
             building with us
@@ -165,7 +194,7 @@
               </svg>
             </li>
           </ul>
-        </section>
+        </article>
       </section>
       <section class="cta-start">
         <h6 class="start-text text-large font-heading">Ready to start?</h6>
@@ -290,5 +319,6 @@
         </li>
       </ul>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
