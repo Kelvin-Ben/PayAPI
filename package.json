@@ -1,0 +1,24 @@
+{
+  "name": "PayAPI",
+  "version": "1.0.0",
+  "description": "![Design preview for the PayAPI multi-page website coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kelvin-Ben/PayAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kelvin-Ben/PayAPI/issues"
+  },
+  "homepage": "https://github.com/Kelvin-Ben/PayAPI#readme"
+}
