@@ -112,6 +112,18 @@ input[type="checkbox"]:checked::after {
   color: var(--primary-color-waterWhite);
 }
 
+
+/* form validation */
+.has-error {
+  border: 1px solid red;
+}
+.error-message {
+  color: red;
+  display: none;
+}
+.success-message {
+  color: green;
+}
 @media screen and (min-width: 1700px) {
   .subscribe {
     width: 85%;
