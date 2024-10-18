@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   }
 
   // reCAPTCHA secret key
-  const recaptchaSecret = '6LerEGEqAAAAAOTSuzExfwzzT1A0mVwP6e8YIRD4';
+  const recaptchaSecret = RECAPTCHA_SECRET_KEY_LIVE;
 
   // verify site
   const verificationURL = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaResponse}`;
