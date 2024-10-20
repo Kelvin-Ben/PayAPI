@@ -1,3 +1,5 @@
+const siteKey = window.location.hostname === 'www.getpayapi.org' ? process.env.RECAPTCHA_SITE_KEY_LIVE : process.env.RECAPTCHA_SITE_KEY;
+const backendUrl = window.location.hostname === localhost ? 'http://localhost:4000/server' : 'api/verifyRecaptcha'
 
   document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -15,30 +17,22 @@
         field.classList.remove('has-error');
         errorSpan.style.display = 'none';
       }
-      clear(formFields);
     })
+
     if (isValid) {
       grecaptcha.ready(function() {
-        grecaptcha.execute('6LerEGEqAAAAAJMgtSACnu4SmDCR1QuA14GAPzbh', {action: 'submit'}).then(function(token) {
+        grecaptcha.execute(siteKey, {action: 'submit'}).then(function(token) {
           document.getElementById('recaptchaResponse').value = token;
           
           // Gather form data
-          // const formData = new FormData(document.getElementById('contact-form'));
-          const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            company: document.getElementById('company').value,
-            title: document.getElementById('title').value,
-            message: document.getElementById('message').value,
-            recaptchaResponse: token
-          }
+          const formData = new FormData(document.getElementById('contact-form'));
 
-          fetch('/api/verifyRecaptcha.js', {
+          fetch(backendUrl, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+              'Accept': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: formData
           })
           .then(response => response.json())
           .then(data => {
