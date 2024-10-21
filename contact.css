@@ -3,10 +3,8 @@ body {
   background-repeat: no-repeat;
   background-size: 45%;
   background-position: calc(100% - -10vw) calc(-33vw);
+  /* position: relative; */
 }
-/* .hero-header {
-  padding: 0 var(--spacing-xlarge);
-} */
 
 /* style intro section */
 .intro {
@@ -14,7 +12,8 @@ body {
 }
 .intro-text {
   color: var(--secondary-color-juanBlue);
-  line-height: 1.1;
+  line-height: 1.13;
+  width: 50%;
 }
 
 /* style contact section */
@@ -27,7 +26,6 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
   min-width: 30%;
   background-color: inherit;
 }
@@ -51,7 +49,9 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: var(--spacing-small) 0;
+  margin: var(--spacing-xsmall) 0;
+  width: auto;
+  line-height: 150%;
 }
 .partners-text {
   color: var(--secondary-color-juanBlue);
@@ -62,12 +62,13 @@ body {
   row-gap: var(--spacing-small);
 }
 
+
 /* styling checkbox */
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   height: 20px;
-  width: 20px;
+  min-width: 20px;
   background-color: #979797;
   border-radius: 2px;
   cursor: pointer;
@@ -111,11 +112,28 @@ input[type="checkbox"]:checked::after {
   color: var(--primary-color-waterWhite);
 }
 
-/* cta-start */
-.cta-start {
-  padding: var(--spacing-large) var(--spacing-xlarge);
-}
 
+/* form validation */
+.has-error {
+  border: 1px solid red;
+}
+.error-message {
+  color: red;
+  display: none;
+}
+.success-message {
+  color: green;
+}
+@media screen and (min-width: 1700px) {
+  .subscribe {
+    width: 85%;
+  }
+  footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+}
 @media screen and (max-width: 1023px) {
   body {
     background-size: 45%;
@@ -129,20 +147,54 @@ input[type="checkbox"]:checked::after {
   }
   .intro-text {
     text-align: center;
-    width: auto;
+    width: 70%;
+    margin: auto;
   }
   .contact {
     flex-direction: column;
     padding: var(--spacing-xsmall) var(--spacing-small);
   }
   .form {
-    width: 50%;
+    width: 60%;
     margin-bottom: var(--spacing-medium);
+  }
+  .subscribe {
+    width: 85%;
+    line-height: 200%;
+  }
+  .partners {
+    padding: var(--spacing-medium) var(--spacing-xmedium);
   }
   .partners-text {
     text-align: center;
   }
-  .cta-start {
-    padding: var(--spacing-xsmall) var(--spacing-small);
+}
+@media screen and (max-width: 768px) {
+  .intro {
+    padding: 0 var(--spacing-xsmall);
+  }
+  .intro-text {
+    width: auto;
+    font-size: var(--font-size-medium);
+  }
+  .contact {
+    padding: var(--spacing-xsmall);
+  }
+  .form {
+    width: auto;
+    padding: 0;
+  }
+  .partners {
+    padding: 0;
+  }
+  .partners-logo {
+    justify-items: center;
+    width: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 400px) {
+  .partners-logo {
+    grid-template-columns: 1fr;
   }
 }
