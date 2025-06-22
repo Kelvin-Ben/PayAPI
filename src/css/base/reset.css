@@ -1,0 +1,71 @@
+/* CSS Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form Elements */
+input, textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-family: var(--font-primary);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+/* Typography Utility Classes */
+.text-xxsmall {
+  font-size: var(--font-size-xxsmall);
+}
+.text-small {
+  font-size: var(--font-size-small);
+}
+.text-medium {
+  font-size: var(--font-size-medium);
+}
+.text-large {
+  font-size: var(--font-size-large);
+}
+.text-xxlarge {
+  font-size: var(--font-size-xxlarge);
+}
+.text-xlarge {
+  font-size: var(--font-size-xlarge);
+}
+.font-body {
+  font-family: var(--font-family-body);
+}
+.font-heading {
+  font-family: var(--font-family-heading);
+} 

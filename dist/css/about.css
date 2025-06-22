@@ -1,0 +1,198 @@
+body {
+  background-image: url(./assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: calc(100% - -10vw) calc(-33vw);
+}
+
+/* style intro section */
+
+.intro {
+  padding: var(--spacing-small) var(--spacing-xlarge);
+  /* margin-left: var(--spacing-large); */
+}
+
+.intro-text {
+  color: var(--secondary-color-juanBlue);
+  line-height: 1.1;
+  margin-left: var(--spacing-large);
+}
+
+.more-about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-xmedium);
+  margin-left: var(--spacing-large);
+}
+
+.vision-section,
+.business-section,
+.culture-section,
+.people-section {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-medium);
+}
+
+.heading {
+  width: 20%;
+  color: var(--secondary-color-juanBlue);
+  font-weight: normal;
+}
+
+.text {
+  width: 51%;
+  color: var(--secondary-color-lightJuanBlue);
+  line-height: 1.5;
+}
+
+/* style the image */
+
+.desktop-team,
+.tablet-team, .mobile-team {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: var(--spacing-xmedium) 0;
+}
+
+.mobile-team {
+  display: none;
+}
+
+/* style stats section */
+
+.stats {
+  padding: 0 var(--spacing-xlarge);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.members,
+.offices,
+.transactions {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-top: 2px solid rgba(151, 151, 151, 0.2);
+  border-bottom: 2px solid rgba(151, 151, 151, 0.2);
+  padding: var(--spacing-small);
+}
+
+.member-text,
+.office-text,
+.transaction-text {
+  color: var(--secondary-color-lightJuanBlue);
+}
+
+.figure {
+  font-weight: normal;
+  color: var(--primary-color-darkPink);
+}
+
+/* .cta-start {
+  padding: var(--spacing-large) var(--spacing-xlarge);
+} */
+
+.cta-heading {
+  color: var(--secondary-color-juanBlue);
+  font-weight: normal;
+}
+
+@media screen and (min-width: 1023px) {
+  .tablet-team {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    background-size: 45%;
+    background-position: calc(100% - -23vw) calc(-20vw);
+  }
+
+  .desktop-team {
+    display: none;
+  }
+  .intro {
+    padding: var(--spacing-small);
+    margin: auto;
+  }
+  .intro-text {
+    text-align: center;
+    margin-left: 0;
+  }
+  .heading {
+    width: 20%;
+  }
+  .text {
+    width: 70%;
+  }
+  .stats {
+    padding: 0 var(--spacing-small);
+  }
+  .transactions {
+    width: auto;
+  }
+  .more-about {
+    margin-top: var(--spacing-medium);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    width: auto;
+  }
+  .intro-text {
+    font-size: var(--font-size-small);
+    padding: 0;
+  }
+  .more-about {
+    margin: var(--spacing-medium) 0;
+  }
+  .vision-section, .business-section, .culture-section, .people-section {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .heading {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+  .text {
+    text-align: center;
+    width: auto;
+  }
+  .tablet-team {
+    display: none;
+  }
+  .mobile-team {
+    display: flex;
+    margin: 0;
+  }
+
+  .stats {
+    padding: 0 var(--spacing-);
+    flex-direction: column;
+    border-top: 2px solid rgba(151, 151, 151, 0.2);
+    border-bottom: 2px solid rgba(151, 151, 151, 0.2);
+    gap: 0;
+  }
+  .members, .offices, .transactions {
+    width: auto;
+    border: none;
+    text-align: center;
+  }
+  .member-text, .office-text, .transaction-text {
+    font-size: var(--font-size-xsmall);
+  }
+  .figure {
+    font-size: var(--font-size-medium);
+  }
+}

@@ -1,0 +1,54 @@
+/* CSS Variables and Custom Properties */
+:root {
+  /* Colors */
+  --primary-color: #36536B;
+  --secondary-color: #BA4270;
+  --accent-color: #FBFCFE;
+  --text-color: #36536B;
+  --background-color: #EDF3F8;
+  --error-color: #FF0000;
+
+  /* Additional Color Variables */
+  --primary-color-darkPink: #ba4270;
+  --primary-color-waterWhite: #fbfcfe;
+  --secondary-color-juanBlue: #36536b;
+  --secondary-color-mirrageBlue: #1b262f;
+  --secondary-color-charmPink: #da6d97;
+  --secondary-color-lightJuanBlue: #6c8294;
+
+  /* Typography */
+  --font-primary: 'Public Sans', sans-serif;
+  --font-heading: 'DM Serif Display', serif;
+  --font-family-body: "Public Sans", sans-serif;
+  --font-family-heading: "DM Serif Display", system-ui;
+
+  /* Font Sizes */
+  --font-size-xxlarge: 72px;
+  --font-size-xlarge: 56px;
+  --font-size-large: 48px;
+  --font-size-medium: 32px;
+  --font-size-small: 24px;
+  --font-size-xsmall: 18px;
+  --font-size-xxsmall: 14px;
+
+  /* Breakpoints */
+  --mobile: 375px;
+  --tablet: 768px;
+  --desktop: 1440px;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-xsmall: 14px;
+  --spacing-small: 25px;
+  --spacing-medium: 32px;
+  --spacing-xmedium: 56px;
+  --spacing-large: 6rem;
+  --spacing-xlarge: 10rem;
+
+  /* Border Radius */
+  --border-radius: 50px;
+} 
